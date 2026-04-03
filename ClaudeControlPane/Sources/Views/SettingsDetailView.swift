@@ -6,14 +6,11 @@ struct SettingsDetailView: View {
 
     var body: some View {
         TabView {
-            Text("Hooks (coming next)")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            HooksView(manager: manager)
                 .tabItem { Label("Hooks", systemImage: "bell") }
-            Text("Permissions (coming soon)")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            PermissionsView(manager: manager)
                 .tabItem { Label("Permissions", systemImage: "lock.shield") }
-            Text("Environment Variables (coming soon)")
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
+            EnvVarsView(manager: manager)
                 .tabItem { Label("Environment", systemImage: "terminal") }
         }
         .navigationTitle(title)
